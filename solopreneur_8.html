@@ -54,19 +54,19 @@
         <div class="cs-my-role__grid">
           <div>
             <span class="cs-my-role__label">End-to-end ownership</span>
-            <span class="cs-my-role__text">Money movement and management experience</span>
+            <span class="cs-my-role__text">Sole designer for money movement and management area</span>
           </div>
           <div>
             <span class="cs-my-role__label">Strategic definition</span>
-            <span class="cs-my-role__text">Built framework that sequenced the roadmap</span>
+            <span class="cs-my-role__text">Created the prioritization framework that guided roadmap decisions</span>
           </div>
           <div>
             <span class="cs-my-role__label">Research leadership</span>
-            <span class="cs-my-role__text">Led research that shaped roadmap priorities beyond my product area</span>
+            <span class="cs-my-role__text">Led foundational research and findings shaped priorities beyond my product area</span>
           </div>
           <div>
             <span class="cs-my-role__label">Cross-functional influence</span>
-            <span class="cs-my-role__text">PM + engineering partnership across a ~40-person team</span>
+            <span class="cs-my-role__text">Partnered with a PM and engineering team within a larger ~40 people team</span>
           </div>
         </div>
       </div>
@@ -113,29 +113,36 @@
           <p class="pullquote__text">One insight stood out: finding customers was solopreneurs' top anxiety. I presented these findings to leadership and made the case that customer acquisition was a strategic gap in our ecosystem. <em>That insight led leadership to form a dedicated team to help solopreneurs acquire customers.</em></p>
         </div>
 
-        <p>For my area of ownership, I turned the research into a framework to guide what we built and in what order: the <strong>Solopreneur Hierarchy of Financial Needs</strong>.</p>
-
-        <!-- Strategic Framework — elevated card -->
-        <div class="cs-highlight-card">
-          <span class="framework-label">Strategic Framework</span>
-          <img src="images/solopreneur/hierarchy.png" alt="Solopreneur Hierarchy of Financial Needs — Receive Money / Understand & Optimize / Plan for Growth" class="no-lightbox" style="width: 100%; display: block; border-radius: 8px;">
-          <p style="margin-top: 24px;">Inspired by Maslow's hierarchy of needs, it organized the research findings into a clear structure and gave the team a reusable system for prioritization decisions. When new ideas came in, we could map them to a layer and talk about what needed to come first. I used it to align stakeholders on a clear order: make the foundational layer robust first, then shift strategy upward to support solopreneurs across their journey.</p>
-        </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════
-         THE FOUNDATION
+         STRATEGIC FRAMEWORK — anchor section
+    ══════════════════════════════════════ -->
+    <section class="cs-section--tint cs-section--border-top" id="framework">
+      <div class="w">
+        <span class="chapter-label">Strategic Framework</span>
+        <p>For my area of ownership, I turned the research into a framework to guide what we built and in what order: the <strong>Solopreneur Hierarchy of Financial Needs</strong>.</p>
+        <img src="images/solopreneur/hierarchy.png" alt="Solopreneur Hierarchy of Financial Needs — Receive Money / Understand & Optimize / Plan for Growth" class="no-lightbox" style="width: 100%; display: block; border-radius: 8px; margin: 24px 0 28px;">
+        <p>Inspired by Maslow's hierarchy of needs, it organized the research findings into a clear structure and gave the team a reusable system for prioritization decisions. When new ideas came in, we could map them to a layer and talk about what needed to come first. I used it to align stakeholders on a clear order: make the foundational layer robust first, then shift strategy upward to support solopreneurs across their journey.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         RECEIVE MONEY (Layer 1)
     ══════════════════════════════════════ -->
     <section class="cs-section cs-section--border-top" id="foundation">
       <div class="w">
-        <span class="chapter-label">The Foundation</span>
-        <h2>Addressing the foundation: Invoice reconciliation</h2>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+          <img src="images/solopreneur/receive money.png" alt="Solopreneur hierarchy: Receive Money layer" class="no-lightbox" style="height: 54px; width: auto; display: block;">
+          <span class="chapter-label" style="margin-bottom: 0;">Receive Money</span>
+        </div>
+        <h2>The foundation's biggest pain point: Invoice reconciliation</h2>
         <div class="callout">
           <span class="callout-label">Research Finding</span>
           <p>Solopreneurs struggled to reconcile invoice payments, which often left their books inaccurate. When we looked at completion data across other QuickBooks products, only <strong>30%</strong> completed the full flow.</p>
         </div>
-        <p>The hierarchy framework showed we needed to make the foundational layer robust first, so that's where we started. Foundational needs like invoicing were supported, but solopreneurs struggled to reconcile payments. The workflow required accounting knowledge and often left their books inaccurate.</p>
+        <p>The hierarchy showed we needed to start at the foundation. Solopreneurs could send invoices and get paid, but reconciling those payments once they come through was a different story. The workflow required accounting knowledge most solopreneurs simply don't have.</p>
         <p>I redesigned the flow so the user only needs to select the bank and the transaction. The system handles the reconciliation in the background.</p>
       </div>
 
@@ -145,8 +152,7 @@
         <!-- Before: 4 screens + time gap card in a scrollable strip -->
         <div class="flow-workflow-group">
           <div class="flow-workflow-header">
-            <span class="flow-workflow-badge">Before</span>
-            <span class="flow-workflow-context">Complex accounting workflow</span>
+            <span class="flow-workflow-badge flow-workflow-badge--after">Before — Complex accounting workflow</span>
           </div>
 
           <div class="flow-strip">
@@ -173,8 +179,8 @@
 
             <!-- Time gap — sits as a pseudo-screen in the flow -->
             <div class="flow-item">
-              <div class="flow-time-card">
-                <span class="flow-time-card__text">Payment comes through the bank,<br>days or weeks later</span>
+              <div class="flow-time-card" style="background: transparent; border: none;">
+                <span class="flow-time-card__text">Payment comes through the bank, days or weeks later</span>
               </div>
             </div>
 
@@ -185,7 +191,7 @@
                 <img src="images/solopreneur/transactions.png" alt="Bank transactions section">
               </div>
               <span class="flow-img-name">Bank transactions</span>
-              <span class="flow-img-caption">Required going to the banking page</span>
+              <span class="flow-img-caption">Required going to the banking page and clicking 'Find match'</span>
             </div>
 
             <div class="flow-arrow">›</div>
@@ -204,10 +210,9 @@
         <!-- After: 3 drawer states, right-45% crop to show context + drawer -->
         <div class="flow-workflow-group flow-workflow-group--after">
           <div class="flow-workflow-header">
-            <span class="flow-workflow-badge flow-workflow-badge--after">After</span>
-            <span class="flow-workflow-context">Accounting handled in the background</span>
+            <span class="flow-workflow-badge flow-workflow-badge--after">After — Accounting handled in the background</span>
           </div>
-          <div class="flow-img-grid flow-img-grid--3">
+          <div class="flow-img-grid" style="grid-template-columns: 1fr auto 1fr auto 1fr; align-items: start;">
 
             <div class="flow-img-item">
               <div class="flow-after-crop">
@@ -217,6 +222,8 @@
               <span class="flow-img-caption">Simple steps to complete</span>
             </div>
 
+            <div class="flow-arrow">›</div>
+
             <div class="flow-img-item">
               <div class="flow-after-crop">
                 <img src="images/solopreneur/mark as paid4.png" alt="Select a transaction to link">
@@ -224,6 +231,8 @@
               <span class="flow-img-name">Select transaction</span>
               <span class="flow-img-caption">System suggests matching bank transactions</span>
             </div>
+
+            <div class="flow-arrow">›</div>
 
             <div class="flow-img-item">
               <div class="flow-after-crop">
@@ -242,19 +251,19 @@
     <!-- ══════════════════════════════════════
          REDESIGN RESULT — label lives inside the card
     ══════════════════════════════════════ -->
-    <section class="cs-section--sm">
+    <section class="cs-section--sm" style="padding: 0;">
       <div class="w">
         <div class="cs-metric-card">
           <span class="chapter-label">Redesign Result</span>
           <div class="cs-metric-card__inner">
             <div class="cs-metric__stat">
               <div class="cs-metric__number">30%</div>
-              <div class="cs-metric__sub">completion in other<br>QuickBooks products</div>
+              <div class="cs-metric__sub">completion in other QuickBooks products</div>
             </div>
             <div class="cs-metric__arrow">→</div>
             <div class="cs-metric__stat">
               <div class="cs-metric__number">82%</div>
-              <div class="cs-metric__sub">task completion<br>in Solopreneur</div>
+              <div class="cs-metric__sub">task completion in Solopreneur</div>
             </div>
           </div>
         </div>
@@ -264,7 +273,7 @@
     <!-- Transition -->
     <section class="cs-section--sm">
       <div class="w">
-        <p style="margin: 0;">With the foundation solid, I used the framework to make the case for shifting strategy upward. The next two challenges mapped to the higher layers: helping solopreneurs understand their financial position and plan for growth.</p>
+        <p style="margin: 0;">With the foundation more solid, new ideas came up, including payment links. But payment links fell in the bottom layer. I used the framework to make the case for shifting strategy upward: the higher layers were still largely unsupported, and solopreneurs were struggling with cash flow and planning for growth. The team aligned and committed the next quarter to those higher-level needs.</p>
       </div>
     </section>
 
@@ -273,8 +282,11 @@
     ══════════════════════════════════════ -->
     <section class="cs-section cs-section--border-top" id="cash-flow">
       <div class="w">
-        <span class="chapter-label">Higher Level Needs</span>
-        <h2>Challenge 1: Clarity in cash flow</h2>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+          <img src="images/solopreneur/understand.png" alt="Solopreneur hierarchy: Understand &amp; Optimize layer" class="no-lightbox" style="height: 54px; width: auto; display: block;">
+          <span class="chapter-label" style="margin-bottom: 0;">Understand &amp; Optimize</span>
+        </div>
+        <h2>Cash flow clarity</h2>
         <div class="callout">
           <span class="callout-label">Research Finding</span>
           <p>Solopreneurs struggled to answer basic questions: how much money do I actually have, and how much can I spend? Existing QuickBooks tools required manual entry of future transactions to generate projections, which was too time consuming for solopreneurs who were already juggling a lot.</p>
@@ -288,8 +300,8 @@
         <img src="images/solopreneur/explorations1.png" alt="Layout explorations — separate lists, table, cards, chevron, link style, and monthly approaches" style="width: 100%; border-radius: 12px;">
       </div>
 
-      <div class="w" style="margin-top: 32px;">
-        <h3>Final designs</h3>
+      <div class="w" style="margin-top: 40px;">
+        <h2>Final designs</h2>
         <p>I validated with 5 solopreneurs. The monthly mental model resonated, and users found the automated projections insightful.</p>
       </div>
 
@@ -307,7 +319,11 @@
     ══════════════════════════════════════ -->
     <section class="cs-section cs-section--border-top" id="scenario">
       <div class="w">
-        <h2>Challenge 2: Planning with confidence</h2>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+          <img src="images/solopreneur/plan.png" alt="Solopreneur hierarchy: Plan for Growth layer" class="no-lightbox" style="height: 54px; width: auto; display: block;">
+          <span class="chapter-label" style="margin-bottom: 0;">Plan for Growth</span>
+        </div>
+        <h2>Planning with confidence</h2>
         <div class="callout">
           <span class="callout-label">Research Finding</span>
           <p>Solopreneurs hesitate on big business decisions because they lack financial expertise and have no one to run decisions by. Big decisions felt like taking a shot in the dark.</p>
@@ -334,7 +350,7 @@
 
       <!-- Final scenario planner — web + mobile GIFs -->
       <div class="w" style="margin-top: 40px;">
-        <h3>Final designs</h3>
+        <h2>Final designs</h2>
       </div>
       <div class="w-wide" style="margin-top: 24px;">
         <div style="display: flex; align-items: flex-end; gap: 24px;">
@@ -350,6 +366,7 @@
     <section class="cs-section--tint" id="impact">
       <div class="w">
         <span class="chapter-label">Impact</span>
+        <p style="margin: 0 0 32px;">QuickBooks Solopreneur launched in the US and UK.</p>
         <div class="cs-impact-stats">
           <div class="cs-impact-stat">
             <div class="cs-impact-number">110K+</div>
@@ -363,11 +380,11 @@
         <div class="cs-impact-qual">
           <div class="cs-impact-qual__item">
             <span class="cs-impact-qual__label">Roadmap impact</span>
-            <p class="cs-impact-qual__desc">Prompted leadership to form a dedicated team focused on customer acquisition</p>
+            <p class="cs-impact-qual__desc">Research surfaced customer acquisition as an unmet need, prompting leadership to form a dedicated team and add it to the roadmap.</p>
           </div>
           <div class="cs-impact-qual__item">
             <span class="cs-impact-qual__label">Framework adopted</span>
-            <p class="cs-impact-qual__desc">Aligned cross-functional partners and guided prioritization decisions</p>
+            <p class="cs-impact-qual__desc">The framework aligned cross-functional partners on priorities and guided roadmap decisions.</p>
           </div>
         </div>
       </div>

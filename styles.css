@@ -338,9 +338,19 @@ a   { color: inherit; text-decoration: none; }
 .footer-copy {
   font-size: 12px;
   font-weight: 500;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   letter-spacing: 0.01em;
   margin-right: auto;
+}
+
+.site-footer--cs {
+  justify-content: space-between;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 /* ============================================================
@@ -532,7 +542,7 @@ main strong { font-weight: 600; color: var(--ink); }
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   font-family: 'Manrope', sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -569,7 +579,7 @@ main strong { font-weight: 600; color: var(--ink); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   display: block;
   margin-bottom: 20px;
 }
@@ -757,7 +767,7 @@ main p em { color: var(--blue); font-style: normal; }
   font-family: 'Manrope', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   line-height: 1.6;
   padding: 20px;
   flex-shrink: 0;
@@ -829,7 +839,7 @@ main p em { color: var(--blue); font-style: normal; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   background: rgba(13, 15, 26, 0.06);
   border-radius: 4px;
   padding: 3px 9px;
@@ -843,7 +853,7 @@ main p em { color: var(--blue); font-style: normal; }
 
 .flow-workflow-context {
   font-size: 12px;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   font-style: italic;
 }
 
@@ -880,7 +890,7 @@ main p em { color: var(--blue); font-style: normal; }
 
 /* Time gap card — sits inline in the scroll strip as a pseudo-screen */
 .flow-time-card {
-  width: 200px;
+  width: 160px;
   height: 280px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -889,7 +899,6 @@ main p em { color: var(--blue); font-style: normal; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 .flow-time-card__text {
@@ -990,7 +999,7 @@ main p em { color: var(--blue); font-style: normal; }
   padding: 0 8px;
   font-size: 24px;
   font-weight: 300;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   line-height: 1;
   align-self: center;
   margin-bottom: 28px;
@@ -1297,7 +1306,7 @@ main p em { color: var(--blue); font-style: normal; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--ink-xsoft);
+  color: var(--ink-soft);
   display: block;
   margin-bottom: 8px;
 }
