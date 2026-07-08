@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucy Mou — QuickBooks Mobile Vision</title>
+  <meta name="description" content="Case study: Lucy Mou defined the mobile platform strategy for Intuit's Business Suite, establishing QuickBooks' next major AI initiative.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="locked">
+
+  <!-- ══════════════════════════════════════
+       PASSWORD OVERLAY
+  ══════════════════════════════════════ -->
+  <div class="password-overlay" id="password-overlay" role="dialog" aria-modal="true" aria-label="Password required">
+    <div class="password-overlay__box" id="password-box">
+      <form id="password-form" class="password-overlay__form" autocomplete="off">
+        <input type="password" id="password-input" class="password-overlay__input" placeholder="Password" aria-label="Password" autocomplete="off">
+        <button type="submit" class="password-overlay__submit" aria-label="Submit password">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </form>
+      <p class="password-overlay__error" id="password-error" aria-live="polite">Incorrect password. Please try again.</p>
+    </div>
+  </div>
+
+  <div id="site-content">
+
+  <div class="progress-bar" id="progress-bar" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="main-nav">
+    <a href="index.html" class="nav__name">Lucy Mou</a>
+    <ul class="nav__links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="sage_about_8.html">About</a></li>
+      <li><a href="lm_resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <header class="cs-hero">
+    <div class="w">
+      <div class="cs-hero__tags">
+        <span class="cs-hero__tag">Strategy</span>
+        <span class="cs-hero__tag">Mobile</span>
+        <span class="cs-hero__tag">AI</span>
+      </div>
+      <h1 class="cs-hero__title">QuickBooks Mobile Vision</h1>
+      <p class="cs-hero__sub" style="max-width: none;">Defining the mobile strategy for Intuit's Business Suite transformation</p>
+    </div>
+  </header>
+
+  <!-- Hero image — full bleed -->
+  <div class="img-hero" style="height: 500px;">
+    <img src="images/mobile vision/mobile_vision_no_bg2.png" alt="QuickBooks Mobile Vision — Mia narrative screens" style="object-fit: contain; object-position: center;">
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         MY ROLE — tint bg, context-setting zone
+    ══════════════════════════════════════ -->
+    <section class="cs-section">
+      <div class="w">
+        <h2 class="cs-my-role__heading">My Role</h2>
+        <div class="cs-my-role__grid">
+          <div>
+            <span class="cs-my-role__label">Cross-functional leadership</span>
+            <span class="cs-my-role__text">Led mobile strategy across Design, Product, Engineering, and GTM</span>
+          </div>
+          <div>
+            <span class="cs-my-role__label">Workshop design and facilitation</span>
+            <span class="cs-my-role__text">Designed and co-facilitated a multi-day workshop to surface assumptions, generate architectural models, and align the team on a direction</span>
+          </div>
+          <div>
+            <span class="cs-my-role__label">Executive influence</span>
+            <span class="cs-my-role__text">Created workflow diagrams that reframed how leadership evaluated the architectural decision</span>
+          </div>
+          <div>
+            <span class="cs-my-role__label">Vision definition</span>
+            <span class="cs-my-role__text">Defined the mobile North Star across three pillars and built a prototype narrative to make the strategy tangible for stakeholders</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         EXECUTIVE SUMMARY
+    ══════════════════════════════════════ -->
+    <section class="cs-section--tint">
+      <div class="w">
+        <h2>Executive summary</h2>
+        <p class="cs-exec-summary">When Intuit was shifting to a Business Suite model, the assumption was that mobile would mirror web. No one had tested it or asked if it made sense. We challenged that assumption. I built a case for a different direction and defined a vision for the mobile experience. The result was a new architecture, headcount to build it, and a concept that became QuickBooks' next major AI initiative.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTEXT
+    ══════════════════════════════════════ -->
+    <section class="cs-section" style="padding-bottom: 32px;">
+      <div class="w">
+        <h2>Project background: the Business Suite shift</h2>
+        <p>Intuit is evolving from standalone products, QuickBooks, Mailchimp, TurboTax, into a connected Business Suite, shifting the business model toward modular adoption, cross-product engagement, and higher lifetime value. On web, the team had a strategy around a platform with many apps, and launched an alpha. Users log into a central platform experience and navigate out to distinct apps like Accounting or Customers.</p>
+        <p>Mobile had no equivalent direction. My team was tasked with defining what the mobile experience of this Business Suite should be. Leadership was leaning toward following the web structure, since cross-platform consistency is a common industry pattern. But we believed mobile needed its own approach. Users have different mindsets and behave differently on mobile, and the platform itself has different capabilities.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         THE PROBLEM
+    ══════════════════════════════════════ -->
+    <section class="cs-section" style="padding-top: 32px;">
+      <div class="w">
+        <h2>The problem statement</h2>
+        <ol style="padding-left: 20px; margin: 0 0 16px;">
+          <li style="font-size: 15px; line-height: 1.85; color: var(--ink-soft); margin-bottom: 10px;">How should the Business Suite strategy adapt for mobile, given its platform constraints and user behaviors?</li>
+          <li style="font-size: 15px; line-height: 1.85; color: var(--ink-soft);">Where could mobile deliver unique value that web fundamentally cannot?</li>
+        </ol>
+        <p>I framed the problem this way so it opened us to the possibilities of mobile, rather than treating web parity as the starting point.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         THE WORKSHOP
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top">
+      <div class="w">
+        <h2>Aligning the team through a workshop</h2>
+        <p>Our team knew web parity wasn't the right call, but we didn't have the shared language to explain why. I designed a multi-day workshop to solve that. I structured it so we had shared context before we generated solutions: we reviewed the web strategy together, mapped the full user journey, and established design principles as a group. Then we surfaced opportunities, wrote how-might-we statements, brainstormed ideas, and storyboarded the strongest concepts.</p>
+        <p>I walked away with a decision on mobile strategy and a set of ideas to build a vision around.</p>
+      </div>
+
+      <div class="w-wide" style="margin-top: 32px;">
+        <img src="images/mobile vision/workshop.png" alt="FigJam board from the mobile strategy workshop" style="width: 100%; border-radius: 12px;">
+      </div>
+
+      <div class="w" style="margin-top: 80px;">
+        <p>Three models came out of the workshop:</p>
+      </div>
+
+      <div class="w-wide" style="margin-top: 24px;">
+        <div class="model-option-grid">
+          <div class="model-option-card">
+            <span class="model-option-card__label">Option 1</span>
+            <h3>Many Apps</h3>
+            <p>One app per product, mirroring the web. Users would download and switch between multiple separate apps to run their business. Fragmented workflows, high user friction, and substantial design and engineering overhead.</p>
+          </div>
+          <div class="model-option-card">
+            <span class="model-option-card__label">Option 2</span>
+            <h3>Three Super Apps</h3>
+            <p>Grouped by business domain and job-to-be-done. Users complete end-to-end workflows without interruption. Feasible within a 12-month horizon.</p>
+          </div>
+          <div class="model-option-card">
+            <span class="model-option-card__label">Option 3</span>
+            <h3>One Unified App</h3>
+            <p>A single destination for everything. Compelling long-term but has performance and execution risks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bleed-wide" style="margin-top: 32px;">
+        <img src="images/mobile vision/comparison.png" alt="Diagram comparing the three architectural structures — Many Apps, Three Super Apps, One Unified App" style="width: 100%; border-radius: 12px;">
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <div class="pullquote" style="padding: 0;">
+          <h2 style="display: block; margin-bottom: 16px;">The decision</h2>
+          <p class="pullquote__text">Against our shared criteria, the choice was clear. <em>Three Super Apps minimized friction, delivered cross-product value, and was executable.</em> The team aligned.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         GETTING LEADERSHIP ON BOARD
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top">
+      <div class="w">
+        <h2>Getting leadership on board</h2>
+        <p>Aligning our own team was the easier half. Getting leadership and the web team on board was harder.</p>
+        <p>Cross-platform consistency is a common industry pattern, and the web team had already shipped an alpha. Instead of debating the principle, I made the cost of it visible.</p>
+        <p>I built workflow diagrams showing tasks like interacting with a lead, converting them to a customer, getting paid. In the many-apps model, users had to download multiple apps and switch between them to complete a single flow. In the Super Apps model, the same tasks happened without interruption.</p>
+        <p></p>
+      </div>
+
+      <div class="bleed-wide" style="margin-top: 32px;">
+        <img src="images/mobile vision/workflow.png" alt="Workflow diagrams comparing Many Apps vs. Three Super Apps for the same task" style="width: 100%; border-radius: 12px;">
+      </div>
+
+      <div class="w">
+        <div class="pullquote" style="padding-bottom: 0;">
+          <p class="pullquote__text">The diagrams shifted the question from "Should mobile match web?" to <em>"Which structure serves mobile users best?"</em>  Leaderhip and the web team aligned on Three Super Apps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DEFINING THE VISION — Option D
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top">
+      <div class="w">
+        <h2>The vision: three pillars of the experience</h2>
+        <p>With the architecture settled, I focused on the experience vision. Mobile shouldn't just be a smaller version of web. It needs to lean into what makes mobile different.</p>
+        <p>I framed the vision around three pillars that work as a system, addressing different phases of the customer journey: getting into QuickBooks, using QuickBooks, and growing through QuickBooks. I built prototype screens around Mia, a landscaping business owner, to show how each pillar would work across her day.</p>
+        <p>To make the strategy tangible, I built a narrative around Mia, a landscaping business owner, and showed how the pillars connect across her business journey.</p>
+      </div>
+
+      <!-- Overview strip -->
+      <div class="w-wide" style="margin-top: 32px;">
+        <div class="model-option-grid">
+          <div class="model-option-card">
+            <span class="model-option-card__label">1</span>
+            <h3>Mobile-native capabilities</h3>
+            <p>Leverage hardware and platform to simplify workflows in ways web cannot. Drives acquisition and reduces onboarding friction.</p>
+          </div>
+          <div class="model-option-card">
+            <span class="model-option-card__label">2</span>
+            <h3>Agentic AI experiences</h3>
+            <p>AI agents handle administrative work proactively, saving time and deepening product engagement over time.</p>
+          </div>
+          <div class="model-option-card">
+            <span class="model-option-card__label">3</span>
+            <h3>Contextual growth pathways</h3>
+            <p>Growth opportunities embedded in workflows rather than layered on top, encouraging expansion naturally.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILLAR 1 -->
+      <div class="w" style="margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--rule);">
+        <h2>1 — Mobile-native capabilities</h2>
+        <p>Mobile should lean into what differentiates it from web. Mobile hardware and platform capabilities make it possible to simplify workflows in ways web cannot. For the vision presentation, I mocked up multiple ideas:</p>
+        <ul>
+          <li>iOS App Clips to try features before downloading</li>
+          <li>Voice-led onboarding to cut setup friction and reduce manual data entry</li>
+          <li>Siri-based business queries for hands-free updates while in the field</li>
+          <li>Tap to Pay to collect payments on site</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 1 deep dive -->
+      <div class="w" style="margin-top: 32px;">
+        <h3>Deep dive: App Clips as an acquisition engine</h3>
+        <p>One barrier to mobile acquisition is that people don't know how QuickBooks will help them. To address this, I designed a top-of-funnel flow that demonstrated value immediately. When Mia discovers QuickBooks through a Google search, she is able to try the invoicing feature via App Clip. She can customize and send a sample invoice to herself before ever downloading the full app.</p>
+        <p>This shows how mobile could support acquisition by demonstrating value before committing to a download.</p>
+      </div>
+      <div class="bleed-wide" style="margin-top: 24px;">
+        <span class="video-label" style="display: inline-block; margin-bottom: 8px;">From the vision presentation</span>
+        <div class="video-wrap" id="video-wrap-1">
+          <video controls playsinline>
+            <source src="images/mobile vision/discovery2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="img-ph" style="aspect-ratio: 16/9; border-radius: 8px;" id="ph-pillar-1">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
+          </svg>
+          App Clips flow
+        </div>
+      </div>
+
+      <!-- PILLAR 2 -->
+      <div class="w" style="margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--rule);">
+        <h2>2 — Agentic AI experiences</h2>
+        <p>Small business owners are constantly juggling administrative overhead. I envisioned a future where AI agents work proactively in the background to save people time and effort.</p>
+        <ul>
+          <li>Customers Agent surfaces leads, drafts estimates, and supports conversion</li>
+          <li>Projects Agent creates projects from client interactions, drafts invoices, schedules payments, and tracks progress</li>
+          <li>Accounting Agent reconciles transactions and handles bookkeeping</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 2 deep dive -->
+      <div class="w" style="margin-top: 32px;">
+        <h3>Deep dive: the Projects Agent</h3>
+        <p>The Projects Agent proactively creates projects based on Mia's client interactions, drafts invoices, and manages payment schedules. Mia can check financial progress using Siri while away from her desk.</p>
+        <p>This illustrated how AI agents save small business owners time, reduce cognitive load, and increase product stickiness by staying embedded in daily workflows.</p>
+      </div>
+      <div class="bleed-wide" style="margin-top: 24px;">
+        <span class="video-label" style="display: inline-block; margin-bottom: 8px;">From the vision presentation</span>
+        <div class="video-wrap" id="video-wrap-2">
+          <video controls playsinline>
+            <source src="images/mobile vision/projects2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="img-ph" style="aspect-ratio: 16/9; border-radius: 8px;" id="ph-pillar-2">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
+          </svg>
+          Projects Agent flow
+        </div>
+      </div>
+
+      <!-- PILLAR 3 -->
+      <div class="w" style="margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--rule);">
+        <h2>3 — Contextual growth pathways</h2>
+        <p>To support modular adoption and cross-product engagement, I designed growth into the workflows rather than layering it on top.</p>
+        <ul>
+          <li>Upgrade prompts that appear only after successful task completion</li>
+          <li>Behavioral recommendations based on recent activity</li>
+          <li>In-context trials of higher-tier features so users experience value before being asked to pay for it</li>
+        </ul>
+      </div>
+
+      <!-- System synthesis -->
+      <div class="w">
+        <div class="pullquote" style="padding-bottom: 0;">
+          <p class="pullquote__text">Together, the three pillars work as a system. <em>Native capabilities drive adoption. Agentic AI deepens engagement. Contextual growth creates expansion</em> without interrupting the experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         IMPACT — perception shift leads
+    ══════════════════════════════════════ -->
+    <section class="cs-section--tint">
+      <div class="w">
+        <h2>What the strategy unlocked</h2>
+
+        <p class="cs-exec-summary" style="margin-top: 24px;">The project repositioned mobile from a companion app to a growth driver, changing how leadership thought about mobile's strategic role in the Business Suite.</p>
+
+        <div class="impact-outcomes" style="margin-top: 40px;">
+          <div class="impact-outcome">
+            <span class="impact-outcome__label">Headcount allocated</span>
+            <p class="impact-outcome__desc">20+ engineers and 2 designers committed to execute the strategy.</p>
+          </div>
+          <div class="impact-outcome">
+            <span class="impact-outcome__label">New AI initiative</span>
+            <p class="impact-outcome__desc">Customer Agent became QuickBooks' next major AI initiative, with a dedicated team formed to build it.</p>
+          </div>
+          <div class="impact-outcome">
+            <span class="impact-outcome__label">Roadmap additions</span>
+            <p class="impact-outcome__desc">Voice Onboarding and App Clips were added to the roadmap with engineering resources allocated to explore both.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         REFLECTION
+    ══════════════════════════════════════ -->
+    <section class="cs-section">
+      <div class="w">
+        <h2>What I learned</h2>
+        <p>Design principles are good guidelines. But sometimes the work is recognizing when a principle doesn't serve your users, and having the conviction to make that case./p>
+        <p>The hardest part was aligning a large cross-functional group on a high-impact strategy. I learned to address leadership's concerns directly and meet people where they were. My through-line: I create impact by making tradeoffs visible, building shared frameworks, and turning strategy into something concrete enough for a team to move on.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         NEXT PROJECT
+    ══════════════════════════════════════ -->
+    <section class="cs-section--next cs-section--border-top">
+      <div class="w">
+        <span class="cs-next-label">Next project</span>
+        <a href="#" class="next-project-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 24px;">
+            <div>
+              <span class="next-project-card__eyebrow">Interaction design · Web</span>
+              <div class="next-project-card__title">Splunk Cloud Platform</div>
+              <p class="next-project-card__desc">Designed the search interface and interaction patterns for Splunk Cloud Platform, making machine data accessible to both technical and non-technical users.</p>
+            </div>
+            <div style="flex-shrink: 0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="index.html#work" style="display: inline-block; margin-top: 20px; font-size: 13px; font-weight: 600; color: var(--ink-soft); text-decoration: none;">← Back to all work</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer site-footer--cs">
+    <p class="footer-copy">© 2026 Lucy Mou</p>
+    <div class="footer-icons">
+      <a href="mailto:ymou94@gmail.com" class="footer-icon" aria-label="Email Lucy Mou">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/y-mou/" target="_blank" rel="noopener" class="footer-icon" aria-label="Lucy Mou on LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  </div>
+  <!-- /#site-content -->
+
+  <script>
+    // Password protection
+    (function () {
+      const PASSWORD = 'hooli';
+      const STORAGE_KEY = 'mobile-vision-unlocked';
+      const body = document.body;
+      const form = document.getElementById('password-form');
+      const input = document.getElementById('password-input');
+      const error = document.getElementById('password-error');
+      const box = document.getElementById('password-box');
+
+      function unlock() {
+        body.classList.remove('locked');
+        sessionStorage.setItem(STORAGE_KEY, 'true');
+      }
+
+      if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+        unlock();
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (input.value === PASSWORD) {
+          unlock();
+        } else {
+          input.classList.add('is-error');
+          error.classList.add('is-visible');
+          box.classList.remove('is-shake');
+          void box.offsetWidth;
+          box.classList.add('is-shake');
+          input.value = '';
+          input.focus();
+        }
+      });
+
+      input.addEventListener('input', function () {
+        input.classList.remove('is-error');
+        error.classList.remove('is-visible');
+      });
+    })();
+
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const bar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+      bar.style.width = Math.min(pct, 100) + '%';
+    }, { passive: true });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('main img:not(.no-lightbox)').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Show placeholder when video has no valid source
+    (function () {
+      const checks = [
+        { wrap: 'video-wrap-1', ph: 'ph-pillar-1' },
+        { wrap: 'video-wrap-2', ph: 'ph-pillar-2' }
+      ];
+      checks.forEach(({ wrap, ph }) => {
+        const wrapEl = document.getElementById(wrap);
+        const phEl   = document.getElementById(ph);
+        if (!wrapEl || !phEl) return;
+        const video = wrapEl.querySelector('video');
+        if (!video) return;
+        phEl.style.display = 'none';
+        video.addEventListener('error', () => {
+          wrapEl.style.display = 'none';
+          phEl.style.display = 'flex';
+        });
+        video.addEventListener('loadedmetadata', () => {
+          phEl.style.display = 'none';
+        });
+        if (!video.currentSrc) {
+          setTimeout(() => {
+            if (!video.currentSrc || video.networkState === 3) {
+              wrapEl.style.display = 'none';
+              phEl.style.display = 'flex';
+            }
+          }, 800);
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

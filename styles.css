@@ -19,6 +19,7 @@
   --nav-bg:     rgba(237, 243, 253, 0.88);
   --nav-h:      64px;
   --ease:       cubic-bezier(0.4, 0, 0.2, 1);
+  --error:      #D6493F;
 }
 
 /* ============================================================
@@ -202,6 +203,14 @@ a   { color: inherit; text-decoration: none; }
 
 .card__cta-arrow { transition: transform 0.2s var(--ease); }
 .card:hover .card__cta-arrow { transform: translateX(3px); }
+
+/* -- Disabled / "coming soon" card -- */
+.card--soon                       { cursor: default; }
+.card--soon:hover                 { background: transparent; }
+.card--soon:hover .card__img-wrap { background: var(--bg); }
+.card--soon:hover .card__img-wrap img { transform: none; }
+
+.card__cta--soon { color: var(--ink-soft); }
 
 /* ============================================================
    STRENGTHS — 3 columns
@@ -1277,12 +1286,34 @@ main p em { color: var(--blue); font-style: normal; }
 }
 
 .video-label {
-  font-size: 11px;
+  display: inline-block;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
+  letter-spacing: 0.12em;
+  color: var(--blue);
+  background: var(--blue-tag);
+  border-radius: 4px;
+  padding: 3px 9px;
   margin-bottom: 8px;
+}
+
+/* Wide bleed — breaks out of the .w/.w-wide max-width cap, keeps a consistent edge
+   margin matching the nav/section gutters rather than running fully edge to edge */
+.bleed-wide {
+  width: 100%;
+  max-width: none;
+  margin: 16px auto 0;
+  padding: 0 64px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1280px) {
+  .bleed-wide { padding: 0 48px; }
+}
+
+@media (max-width: 768px) {
+  .bleed-wide { padding: 0 24px; }
 }
 
 /* ============================================================
@@ -1462,4 +1493,196 @@ main p em { color: var(--blue); font-style: normal; }
 }
 main img:not(.no-lightbox) {
   cursor: zoom-in;
+}
+
+/* ============================================================
+   PASSWORD OVERLAY — gates protected case studies
+   ============================================================ */
+body.locked #site-content { display: none; }
+
+.password-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--bg);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+body.locked .password-overlay { display: flex; }
+
+.password-overlay__box {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+.password-overlay__form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.password-overlay__input {
+  flex: 1;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--rule);
+  border-radius: 6px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.15s var(--ease);
+}
+
+.password-overlay__input::placeholder { color: var(--ink-xsoft); }
+.password-overlay__input:focus { border-color: var(--blue); }
+.password-overlay__input.is-error { border-color: var(--error); }
+
+.password-overlay__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: #fff;
+  background: var(--blue);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.15s var(--ease);
+}
+
+.password-overlay__submit:hover { opacity: 0.9; }
+
+.password-overlay__error {
+  font-size: 12px;
+  color: var(--error);
+  margin-top: 14px;
+  min-height: 16px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.15s var(--ease);
+}
+
+.password-overlay__error.is-visible { opacity: 1; }
+
+@keyframes password-shake {
+  20%, 80% { transform: translateX(-1px); }
+  40%, 60% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+}
+
+.password-overlay__box.is-shake { animation: password-shake 0.4s var(--ease); }
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+body.about-page { background: var(--bg); }
+
+.about-hero { padding: 64px 0 80px; }
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.about-hero__photo {
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--rule);
+}
+
+.about-hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
+
+.about-hero__heading {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+
+.about-hero__intro p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+  max-width: 560px;
+}
+
+.about-hero__intro p:last-child { margin-bottom: 0; }
+
+/* -- Experience / Education rows -- */
+.exp-list {
+  padding: 0 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0 40px;
+  padding: 32px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.exp-list .exp-row:last-child { border-bottom: 1px solid var(--rule); }
+
+.exp-date {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-top: 2px;
+}
+
+.exp-org {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.exp-role {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.exp-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1280px) {
+  .about-hero  { padding: 56px 0 72px; }
+  .exp-list    { padding: 0 48px; }
+}
+
+@media (max-width: 768px) {
+  .about-hero          { padding: 48px 0 56px; }
+  .about-hero__grid    { grid-template-columns: 1fr; gap: 32px; }
+  .about-hero__photo   { max-width: 240px; }
+  .about-hero__heading { font-size: 28px; }
+
+  .exp-list { padding: 0 24px; }
+  .exp-row  { grid-template-columns: 1fr; gap: 8px 0; padding: 24px 0; }
+}
+
+@media (max-width: 375px) {
+  .about-hero__heading { font-size: 24px; }
 }

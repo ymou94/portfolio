@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucy Mou — About</title>
+  <meta name="description" content="Lucy Mou is a senior product designer with 8 years of experience in fintech and B2B software.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="about-page">
+
+  <!-- NAV -->
+  <nav class="nav" id="main-nav">
+    <a href="index.html" class="nav__name">Lucy Mou</a>
+    <ul class="nav__links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="lm_resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       INTRO
+  ══════════════════════════════════════ -->
+  <section class="about-hero">
+    <div class="w-wide">
+      <div class="about-hero__grid">
+        <div class="about-hero__photo">
+          <img src="images/me.jpeg" alt="Lucy Mou">
+        </div>
+        <div class="about-hero__intro">
+          <h1 class="about-hero__heading">Hello, nice to meet you!</h1>
+          <p>I'm Lucy, a Bay Area native with 8 years of design experience across fintech and B2B software.</p>
+          <p>I love untangling complexity and turning it into intuitive tools. I want to reduce the time and effort it takes to do complicated and/or tedious tasks, and create tools that let people do things they never imagined they could do. I want to give people confidence to act and time to focus on what matters to them.</p>
+          <p>When I'm not designing or prompting Claude, you can find me digging balls on the volleyball court, baking sweet treats, and hunting for the best boba wherever I go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <span class="section-label contact-eyebrow">Get in touch</span>
+    <h2 class="contact-heading">Let's work together.</h2>
+    <p class="contact-sub">I'm currently open to new opportunities. Whether you have a role to discuss or just want to connect, I'd love to hear from you!</p>
+    <div class="contact-links">
+      <a href="mailto:ymou94@gmail.com" class="contact-btn contact-btn--primary">Email me</a>
+      <a href="https://www.linkedin.com/in/y-mou/" target="_blank" rel="noopener" class="contact-btn contact-btn--secondary">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p class="footer-copy">© 2026 Lucy Mou</p>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
