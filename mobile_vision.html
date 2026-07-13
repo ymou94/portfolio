@@ -153,8 +153,15 @@
             <h3>Many Apps</h3>
             <p>One app per product, mirroring the web. Users would download and switch between multiple separate apps to run their business. Fragmented workflows, high user friction, and substantial design and engineering overhead.</p>
           </div>
-          <div class="model-option-card">
-            <span class="model-option-card__label">Option 2</span>
+          <div class="model-option-card model-option-card--selected">
+            <div class="model-option-card__top">
+              <span class="model-option-card__label">Option 2</span>
+              <span class="model-option-card__check" aria-label="Selected option" title="Selected">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </span>
+            </div>
             <h3>Three Super Apps</h3>
             <p>Grouped by business domain and job-to-be-done. Users complete end-to-end workflows without interruption. Feasible within a 12-month horizon.</p>
           </div>
@@ -173,7 +180,7 @@
       <div class="w" style="margin-top: 32px;">
         <div class="pullquote" style="padding: 0;">
           <h2 style="display: block; margin-bottom: 16px;">The decision</h2>
-          <p class="pullquote__text">Against our shared criteria, the choice was clear. <em>Three Super Apps minimized friction, delivered cross-product value, and was executable.</em> The team aligned.</p>
+          <p class="pullquote__text"> Our team aligned on the <em>Three Super Apps</em> because it <em>minimized friction, delivered cross-product value, and was executable.</em> </p>
         </div>
       </div>
     </section>
@@ -253,16 +260,8 @@
       </div>
       <div class="bleed-wide" style="margin-top: 24px;">
         <span class="video-label" style="display: inline-block; margin-bottom: 8px;">From the vision presentation</span>
-        <div class="video-wrap" id="video-wrap-1">
-          <video controls playsinline>
-            <source src="images/mobile vision/discovery2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="img-ph" style="aspect-ratio: 16/9; border-radius: 8px;" id="ph-pillar-1">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
-          </svg>
-          App Clips flow
+        <div class="video-wrap">
+          <img src="images/mobile vision/discovery2.gif" alt="App Clips discovery flow — from the vision presentation" class="no-lightbox">
         </div>
       </div>
 
@@ -285,16 +284,8 @@
       </div>
       <div class="bleed-wide" style="margin-top: 24px;">
         <span class="video-label" style="display: inline-block; margin-bottom: 8px;">From the vision presentation</span>
-        <div class="video-wrap" id="video-wrap-2">
-          <video controls playsinline>
-            <source src="images/mobile vision/projects2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="img-ph" style="aspect-ratio: 16/9; border-radius: 8px;" id="ph-pillar-2">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
-          </svg>
-          Projects Agent flow
+        <div class="video-wrap">
+          <img src="images/mobile vision/projects2.gif" alt="Projects Agent flow — from the vision presentation" class="no-lightbox">
         </div>
       </div>
 
@@ -355,8 +346,33 @@
     </section>
 
     <!-- ══════════════════════════════════════
-         NEXT PROJECT
+         PREVIOUS PROJECT
     ══════════════════════════════════════ -->
+    <section class="cs-section--next cs-section--border-top">
+      <div class="w">
+        <span class="cs-next-label">Previous project</span>
+        <a href="solopreneur_8.html" class="next-project-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 24px;">
+            <div>
+              <span class="next-project-card__eyebrow">0→1 · Web + Mobile</span>
+              <div class="next-project-card__title">QuickBooks Solopreneur</div>
+              <p class="next-project-card__desc">82% task completion on invoice reconciliation, up from 30% in other QuickBooks products. Product now serves 110K+ subscribers across the US and UK.</p>
+            </div>
+            <div style="flex-shrink: 0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a href="index.html#work" style="display: inline-block; margin-top: 20px; font-size: 13px; font-weight: 600; color: var(--ink-soft); text-decoration: none;">← Back to all work</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         NEXT PROJECT (Splunk — restore when case study is ready)
+    ══════════════════════════════════════
     <section class="cs-section--next cs-section--border-top">
       <div class="w">
         <span class="cs-next-label">Next project</span>
@@ -378,6 +394,7 @@
         <a href="index.html#work" style="display: inline-block; margin-top: 20px; font-size: 13px; font-weight: 600; color: var(--ink-soft); text-decoration: none;">← Back to all work</a>
       </div>
     </section>
+    -->
 
   </main>
 
@@ -483,37 +500,6 @@
     lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-    // Show placeholder when video has no valid source
-    (function () {
-      const checks = [
-        { wrap: 'video-wrap-1', ph: 'ph-pillar-1' },
-        { wrap: 'video-wrap-2', ph: 'ph-pillar-2' }
-      ];
-      checks.forEach(({ wrap, ph }) => {
-        const wrapEl = document.getElementById(wrap);
-        const phEl   = document.getElementById(ph);
-        if (!wrapEl || !phEl) return;
-        const video = wrapEl.querySelector('video');
-        if (!video) return;
-        phEl.style.display = 'none';
-        video.addEventListener('error', () => {
-          wrapEl.style.display = 'none';
-          phEl.style.display = 'flex';
-        });
-        video.addEventListener('loadedmetadata', () => {
-          phEl.style.display = 'none';
-        });
-        if (!video.currentSrc) {
-          setTimeout(() => {
-            if (!video.currentSrc || video.networkState === 3) {
-              wrapEl.style.display = 'none';
-              phEl.style.display = 'flex';
-            }
-          }, 800);
-        }
-      });
-    })();
   </script>
 
 </body>
