@@ -103,6 +103,11 @@ a   { color: inherit; text-decoration: none; }
   padding: 64px 64px 32px;
 }
 
+.section-header .section-label {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
 /* ============================================================
    CASE STUDY CARDS — horizontal stacked list
    ============================================================ */
@@ -216,7 +221,7 @@ a   { color: inherit; text-decoration: none; }
    STRENGTHS — 3 columns
    ============================================================ */
 .strengths-section {
-  padding: 72px 64px 80px;
+  padding: 120px 64px;
 }
 
 .strengths-header {
@@ -224,15 +229,20 @@ a   { color: inherit; text-decoration: none; }
   margin-bottom: 48px;
 }
 
+.strengths-header .section-label {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
 .strengths-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 1080px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
 .strength-item {
-  padding: 0 40px;
+  padding: 0 32px;
   border-right: 1px solid var(--rule);
 }
 
@@ -1619,8 +1629,8 @@ body.about-page { background: var(--bg); }
   border-bottom: 1px solid var(--rule);
 }
 
-.about-page .about-ai-section--first  { padding-bottom: 32px; }
-.about-page .about-ai-section--second { padding-top: 32px; }
+.about-page .about-ai-section--first  { padding-top: 100px; padding-bottom: 32px; }
+.about-page .about-ai-section--second { padding-top: 32px; padding-bottom: 100px; }
 
 .about-hero { padding: 64px 0 80px; }
 
