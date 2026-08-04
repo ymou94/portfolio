@@ -1221,7 +1221,7 @@ main p em { color: var(--blue); font-style: normal; }
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 0 24px;
-  align-items: start;
+  align-items: baseline;
 }
 
 /* Default label: uppercase small caps (Roadmap, Framework) */
@@ -1439,7 +1439,7 @@ main p em { color: var(--blue); font-style: normal; }
 }
 
 .cs-my-role__label {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1449,7 +1449,7 @@ main p em { color: var(--blue); font-style: normal; }
 }
 
 .cs-my-role__text {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--ink-soft);
   line-height: 1.65;
 }
