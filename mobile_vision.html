@@ -75,7 +75,7 @@
         <div class="cs-my-role__grid">
           <div>
             <span class="cs-my-role__label">Cross-functional leadership</span>
-            <span class="cs-my-role__text">Led mobile strategy across Design, Product, Engineering, and GTM</span>
+            <span class="cs-my-role__text" id="mobilevision-role-crossfunctional">Led mobile strategy across Design, Product, Engineering, and GTM</span>
           </div>
           <div>
             <span class="cs-my-role__label">Workshop design and facilitation</span>
@@ -362,7 +362,7 @@
     <section class="cs-section--next cs-section--border-top">
       <div class="w">
         <span class="cs-next-label">Previous project</span>
-        <a href="solopreneur_8.html" class="next-project-card">
+        <a href="solopreneur.html" class="next-project-card">
           <div style="display: flex; justify-content: space-between; align-items: center; gap: 24px;">
             <div>
               <span class="next-project-card__eyebrow">0→1 · Web + Mobile</span>
@@ -512,6 +512,16 @@
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
+
+  <!-- TAILORED VERSIONS: see index.html and tailor.js for how this works -->
+  <script>
+    window.TAILORED = {
+      // <company-slug>: {
+      //   'mobilevision-role-crossfunctional': '...'
+      // },
+    };
+  </script>
+  <script src="tailor.js"></script>
 
 </body>
 </html>

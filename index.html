@@ -106,7 +106,7 @@
 
   <div class="cards-list">
 
-    <a href="solopreneur_8.html" class="card">
+    <a href="solopreneur.html" class="card">
       <div class="card__img-wrap">
         <img src="images/homepage/cash flow hero no bg2.png" alt="QuickBooks Solopreneur dashboard and mobile app screens">
       </div>
@@ -178,17 +178,22 @@
 
       <div class="strength-item">
         <h3 class="strength-title">Product Direction &amp; Strategy</h3>
-        <p class="strength-desc">I research, synthesize, and build frameworks that help teams align on what to build and why.</p>
+        <p class="strength-desc" id="strength-strategy">I research, synthesize, and build frameworks that help teams align on what to build and why.</p>
       </div>
 
       <div class="strength-item">
         <h3 class="strength-title">0→1 Product Design</h3>
-        <p class="strength-desc">I've taken multiple products from ambiguity to launch, including one now serving 110K+ subscribers.</p>
+        <p class="strength-desc" id="strength-01">I've taken multiple products from ambiguity to launch, including one now serving 110K+ subscribers.</p>
       </div>
 
       <div class="strength-item">
-        <h3 class="strength-title">Systems Thinking</h3>
-        <p class="strength-desc">I design with the full product ecosystem in mind, connecting patterns and components across teams, surfaces and user workflows.</p>
+        <h3 class="strength-title">Platform Thinking</h3>
+        <p class="strength-desc" id="strength-systems">I design with the full product ecosystem in mind, connecting patterns and components across teams, surfaces and user workflows.</p>
+      </div>
+
+      <div class="strength-item">
+        <h3 class="strength-title">Design Systems</h3>
+        <p class="strength-desc" id="strength-design-systems">I scaled the mobile design system by mentoring designers in office hours and cutting component merge time to about 2 weeks.</p>
       </div>
 
     </div>
@@ -215,6 +220,22 @@
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
   </script>
+
+  <!-- TAILORED VERSIONS: add a company slug below to customize this page for a specific application.
+       Visit index.html?<slug> (e.g. index.html?sofi) to preview. See tailor.js for how this is applied. -->
+  <script>
+    window.TAILORED = {
+      // <company-slug>: {
+      //   'strength-strategy': '...',
+      //   'strength-01': '...',
+      //   'strength-systems': '...'
+      // },
+      sofi: {
+        'strength-strategy': 'I research, synthesize, and build frameworks that help cross-functional teams align on what to build and why.'
+      },
+    };
+  </script>
+  <script src="tailor.js"></script>
 
 </body>
 </html>

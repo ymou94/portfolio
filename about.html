@@ -34,7 +34,7 @@
         <div class="about-hero__intro">
           <h1 class="about-hero__heading">Hello, nice to meet you!</h1>
           <p>I'm Lucy, a Bay Area native with 8 years of design experience across fintech and B2B software.</p>
-          <p>I love untangling complexity and turning it into intuitive tools. I want to reduce the time and effort it takes to do complicated and/or tedious tasks, and create tools that let people do things they never imagined they could do. I want to give people confidence to act and time to focus on what matters to them.</p>
+          <p id="about-intro-philosophy">I love untangling complexity and turning it into intuitive tools. I want to reduce the time and effort it takes to do complicated and/or tedious tasks, and create tools that let people do things they never imagined they could do. I want to give people confidence to act and time to focus on what matters to them.</p>
           <p>When I'm not designing or prompting Claude, you can find me digging balls on the volleyball court, baking sweet treats, and hunting for the best boba wherever I go.</p>
         </div>
       </div>
@@ -52,7 +52,7 @@
 
       <div class="strength-item">
         <h3 class="strength-title">Conviction with curiosity</h3>
-        <p class="strength-desc">I ground my point of view in research, but I hold it loosely. Strong team decisions matter more than being right.</p>
+        <p class="strength-desc" id="principle-conviction">I ground my point of view in research, but I hold it loosely. Strong team decisions matter more than being right.</p>
       </div>
 
       <div class="strength-item">
@@ -118,6 +118,19 @@
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
   </script>
+
+  <!-- TAILORED VERSIONS: see index.html and tailor.js for how this works -->
+  <script>
+    window.TAILORED = {
+      // <company-slug>: {
+      //   'about-intro-philosophy': '...'
+      // },
+      sofi: {
+        'principle-conviction': 'I ground my point of view in research, but I hold it loosely. Strong decisions with my cross-functional team matter more than being right.'
+      },
+    };
+  </script>
+  <script src="tailor.js"></script>
 
 </body>
 </html>

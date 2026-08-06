@@ -249,8 +249,10 @@ a   { color: inherit; text-decoration: none; }
 
 .strengths-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1160px;
+  /* Outer columns lose one side of padding (below), so they're narrower by
+     that amount — keeps text width identical across all four items. */
+  grid-template-columns: calc(25% - 16px) calc(25% + 16px) calc(25% + 16px) calc(25% - 16px);
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -259,7 +261,8 @@ a   { color: inherit; text-decoration: none; }
   border-right: 1px solid var(--rule);
 }
 
-.strength-item:last-child { border-right: none; }
+.strength-item:first-child { padding-left: 0; }
+.strength-item:last-child  { padding-right: 0; border-right: none; }
 
 .strength-title {
   font-size: 15px;
@@ -395,6 +398,32 @@ a   { color: inherit; text-decoration: none; }
   .contact-section    { padding: 64px 48px 72px; }
   .section-header     { padding: 56px 48px 28px; }
   .site-footer        { padding: 28px 48px; }
+}
+
+/* ============================================================
+   RESPONSIVE — 900px (strengths: 4 → 2 columns to protect line length)
+   ============================================================ */
+@media (max-width: 900px) {
+  .strengths-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+  }
+
+  /* 2x2 wrap changes which items sit on the outer edge, so the desktop
+     padding trick no longer applies — go back to symmetric padding. */
+  .strength-item:first-child,
+  .strength-item:last-child {
+    padding: 0 32px;
+  }
+
+  .strength-item:nth-child(2n) { border-right: none; }
+
+  .strength-item:nth-child(n+3) {
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .strength-item:last-child { border-right: none; }
 }
 
 /* ============================================================

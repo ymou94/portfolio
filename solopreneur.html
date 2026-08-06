@@ -66,7 +66,7 @@
           </div>
           <div>
             <span class="cs-my-role__label">Cross-functional influence</span>
-            <span class="cs-my-role__text">Partnered with a PM and engineering team within a larger ~40 people team</span>
+            <span class="cs-my-role__text" id="solopreneur-role-crossfunctional">Partnered with a PM and engineering team within a larger ~40 people team</span>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
     <section class="cs-section--tint cs-section--border-top" id="framework">
       <div class="w">
         <h2>Creating a strategic framework</h2>
-        <p>For my area of ownership, I turned the research into a framework to guide what we build and in what order: the <strong>Solopreneur Hierarchy of Financial Needs</strong>.</p>
+        <p id="solopreneur-framework-intro">For my area of ownership, I turned the research into a framework to guide what we build and in what order: the <strong>Solopreneur Hierarchy of Financial Needs</strong>.</p>
         <img src="images/solopreneur/hierarchy.png" alt="Solopreneur Hierarchy of Financial Needs — Receive Money / Understand & Optimize / Plan for Growth" class="no-lightbox" style="width: 100%; display: block; border-radius: 8px; margin: 24px 0 28px;">
         <p>Inspired by Maslow's hierarchy of needs, it organized the research findings into a clear structure and gave the team a reusable system for prioritization decisions. When new ideas came in, we could map them to a layer and talk about what needed to come first. I used it to align stakeholders on a clear order: make the foundational layer robust first, then shift strategy upward to support solopreneurs across their journey.</p>
       </div>
@@ -141,7 +141,7 @@
           <span class="callout-label">Research Finding</span>
           <p>Solopreneurs struggled to reconcile invoice payments, which often left their books inaccurate. When we looked at completion data across other QuickBooks products, only <strong>30%</strong> completed the full flow.</p>
         </div>
-        <p>The hierarchy showed we needed to start at the foundation. Solopreneurs could send invoices and get paid, but reconciling those payments once they come through was a different story. The workflow required accounting knowledge most solopreneurs simply don't have.</p>
+        <p id="solopreneur-reconciliation-problem">The hierarchy showed we needed to start at the foundation. Solopreneurs could send invoices and get paid, but reconciling those payments once they come through was a different story. The workflow required accounting knowledge most solopreneurs simply don't have.</p>
         <p>I redesigned the flow so the user only needs to select the bank and the transaction. The system handles the reconciliation in the background.</p>
       </div>
 
@@ -501,6 +501,20 @@
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
+
+  <!-- TAILORED VERSIONS: see index.html and tailor.js for how this works -->
+  <script>
+    window.TAILORED = {
+      // <company-slug>: {
+      //   'solopreneur-reconciliation-problem': '...',
+      //   'solopreneur-framework-intro': {html: '...'}
+      // },
+      sofi: {
+        'solopreneur-role-crossfunctional': 'Partnered with a PM and engineering team within a larger ~40 people team to define and align on product strategy'
+      },
+    };
+  </script>
+  <script src="tailor.js"></script>
 
 </body>
 </html>
