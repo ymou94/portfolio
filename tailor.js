@@ -57,8 +57,15 @@
     });
   }
 
+  function applyResume() {
+    var link = document.getElementById('nav-resume-link');
+    if (!link) return;
+    link.setAttribute('href', 'resumes/lucy_mou_resume_' + slug + '.pdf');
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     carryParamOnInternalLinks();
     applyOverrides();
+    applyResume();
   });
 })();
