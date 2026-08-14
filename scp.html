@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucy Mou — Splunk Cloud Platform</title>
+  <meta name="description" content="Case study: Lucy Mou designed the raw data exploration workflow for Splunk Cloud Platform, helping technical users scan dense machine data and take action on it.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="progress-bar" id="progress-bar" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="main-nav">
+    <a href="index.html" class="nav__name">Lucy Mou</a>
+    <ul class="nav__links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="lm_resume.pdf" target="_blank" rel="noopener" id="nav-resume-link">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <header class="cs-hero">
+    <div class="w">
+      <div class="cs-hero__tags">
+        <span class="cs-hero__tag">Interaction design</span>
+        <span class="cs-hero__tag">Web</span>
+      </div>
+      <h1 class="cs-hero__title">Splunk Cloud Platform</h1>
+      <p class="cs-hero__sub">Designing a no-code search experience for non-technical users</p>
+    </div>
+  </header>
+
+  <!-- Hero image — full bleed -->
+  <div class="img-hero">
+    <img src="images/scp/scp4.png" alt="Splunk Cloud Platform search results grid showing the raw data exploration workflow" style="object-fit: contain; object-position: center;">
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         MY ROLE
+    ══════════════════════════════════════ -->
+    <section class="cs-section">
+      <div class="w">
+        <h2 class="cs-my-role__heading">My Role</h2>
+        <div class="cs-my-role__grid">
+          <div>
+            <span class="cs-my-role__label">Interaction design</span>
+            <span class="cs-my-role__text">Designed the point-and-click search experience</span>
+          </div>
+          <div>
+            <span class="cs-my-role__label">Cross-functional collaboration</span>
+            <span class="cs-my-role__text">Worked with product and engineering to weigh tradeoffs and decide what shipped</span>
+          </div>
+          <div>
+            <span class="cs-my-role__label">Team</span>
+            <span class="cs-my-role__text">UX Designer (me), 1 Head PM, 1 PM, 5 engineers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         EXECUTIVE SUMMARY
+    ══════════════════════════════════════ -->
+    <section class="cs-section--tint">
+      <div class="w">
+        <h2>Executive Summary</h2>
+        <p class="cs-exec-summary">Splunk's flagship product required users to write code to search through data, so non-technical users always had to go through a teammate who codes. I designed the point-and-click workflow that let non-technical users scan raw event text, spot anomalies, and dig into what's wrong on their own. It shipped as part of Splunk Cloud Platform's core search experience, allowing users to solve problems faster.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROJECT BACKGROUND
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top">
+      <div class="w">
+        <h2>Project background</h2>
+        <p>Splunk wanted to expand beyond its core technical user base. Splunk's flagship product, Enterprise, requires users to write code in order to search through data, so managers or business analysts who don't know how to code had to ask an engineer to do it for them. Splunk Cloud Platform is a new product that addresses this issue: engineers can keep writing code, and everyone else gets a point-and-click interface to do the same job. I designed that interface, specifically the interactions that let non-technical users spot anomalies in their data and dig into it themselves.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROBLEM
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top">
+      <div class="w">
+        <h2>The problem</h2>
+        <p>Users need to scan their data quickly to catch anomalies. That means checking for outliers and making sure data got extracted correctly, then tracking down the issue and fixing it. How do we help non-technical users do all of that without writing code?</p>
+
+        <h3>User needs</h3>
+        <ul>
+          <li>Quickly scan raw data text to check for outliers and confirm data is extracted correctly, including seeing formatted JSON text</li>
+          <li>Take actions on specific fields and values</li>
+          <li>Find out what's wrong and fix it</li>
+        </ul>
+
+        <!--
+        <h3>The bar we needed to hit: Splunk Enterprise</h3>
+        <p>Splunk's flagship product, Enterprise, already has this feature, and we wanted to bring a similar experience to our new product. In Enterprise, when a user runs a search, they see results below and can switch from "raw" to "list" view to see a formatted version of the raw event text. From there, they can click a term to bring up an actions menu and dig deeper.</p>
+        -->
+      </div>
+
+      <!--
+      <div class="w-wide" style="margin-top: 24px;">
+        <div class="flow-strip" style="padding: 0;">
+          <div class="flow-item">
+            <div class="flow-item__screen">
+              [Splunk Enterprise — raw view]
+              <small>Search results, raw text</small>
+            </div>
+            <span class="flow-label">Raw view</span>
+          </div>
+          <div class="flow-arrow">›</div>
+          <div class="flow-item">
+            <div class="flow-item__screen">
+              [Splunk Enterprise — list view]
+              <small>Formatted event text</small>
+            </div>
+            <span class="flow-label">List view</span>
+          </div>
+          <div class="flow-arrow">›</div>
+          <div class="flow-item">
+            <div class="flow-item__screen">
+              [Splunk Enterprise — actions menu on term click]
+              <small>Actions menu</small>
+            </div>
+            <span class="flow-label">Actions menu</span>
+          </div>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DESIGN PROBLEM #1: SCAN THROUGH EVENTS QUICKLY
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top" id="problem-1">
+      <div class="w">
+        <span class="chapter-label">Design problem #1</span>
+        <h2>Scan through events quickly</h2>
+        <p>By default, the data grid truncates event text to 2 lines. Event text is often long, and users need to see the full text to catch anomalies. My solution let users expand cells, individually and all at once, and formatted the raw text so it's easier to read once expanded.</p>
+
+        <h3>Expanding a cell</h3>
+        <p>I initially explored 3 interaction patterns: double-clicking a row to expand it, a right-click menu to expand, and dragging the row divider.</p>
+      </div>
+
+      <div class="bleed-wide" style="margin-top: 32px;">
+        <div class="flow-img-grid flow-img-grid--3">
+          <div class="flow-img-item">
+            <span class="flow-workflow-badge flow-workflow-badge--after flow-workflow-badge--label">Double click</span>
+            <img src="images/scp/double click.gif" alt="Double click row to expand" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          </div>
+          <div class="flow-img-item">
+            <span class="flow-workflow-badge flow-workflow-badge--after flow-workflow-badge--label">Right-click menu</span>
+            <img src="images/scp/right click.gif" alt="Right-click menu to expand" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          </div>
+          <div class="flow-img-item">
+            <span class="flow-workflow-badge flow-workflow-badge--after flow-workflow-badge--label">Drag divider</span>
+            <img src="images/scp/drag divider.gif" alt="Drag row divider to expand" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="w" style="margin-top: 40px;">
+        <p>My PM's feedback was that these were hard to discover. A visual affordance would make the expand option easier to find, so I then explored expand carats and a "show all lines" button.</p>
+      </div>
+
+      <div class="bleed-wide" style="margin-top: 32px;">
+        <div class="flow-img-grid flow-img-grid--3">
+          <div class="flow-img-item">
+            <span class="flow-workflow-badge flow-workflow-badge--after flow-workflow-badge--label">Expand carats</span>
+            <img src="images/scp/expand carat.gif" alt="Expand carats" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          </div>
+          <div class="flow-img-item">
+            <span class="flow-workflow-badge flow-workflow-badge--after flow-workflow-badge--label">"Show all lines" button</span>
+            <img src="images/scp/show all lines.gif" alt="&quot;Show all lines&quot; button" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          </div>
+          <div class="flow-img-item">
+            <span class="flow-workflow-badge flow-workflow-badge--after flow-workflow-badge--label">Hover for more actions</span>
+            <img src="images/scp/hover more actions.gif" alt="Hover to reveal more actions" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <div class="pullquote">
+          <p class="pullquote__text">I decided on "show all lines" because it already existed as a pattern in Splunk Enterprise. <em>That meant less relearning for users switching between our products.</em></p>
+        </div>
+      </div>
+
+      <div class="w" style="margin-top: 40px;">
+        <h3>Expanding all cells at once</h3>
+        <p>Beyond expanding individual cells, I proposed a column header option to expand every event in the grid at once, so users could see the full text of all their data.</p>
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <img src="images/scp/expand all.gif" alt="Expand-all option added to the column header" style="width: 100%; height: auto; border-radius: 8px;">
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <p>My PM wasn't convinced. Most customers we'd talked to only expanded a handful of events, so she wanted to table it for a later release. I brought in engineering to check feasibility, and they backed the idea. It wasn't much extra work, and it sped up the workflow for users.</p>
+      </div>
+
+      <div class="w" style="margin-top: 40px;">
+        <h3>Formatting raw event text</h3>
+        <p>Even with a cell expanded, raw event text is often code and appears as one dense block. The idea was to format it so users could scan it faster. When a user clicks a cell, a side panel opens with the formatted version. Every node is expanded by default. Customers told me they were annoyed at having to open nodes one by one, so showing everything expanded saved them that step.</p>
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <img src="images/scp/2.1.png" alt="Side panel showing formatted raw event text, all nodes expanded" style="width: 100%; height: auto; border-radius: 8px;">
+      </div>
+
+      <div class="w" style="margin-top: 40px;">
+        <h3>Formatting all cells</h3>
+        <p>I proposed a "format all" option so users could see formatted text for all cells, instead of one at a time. I brought it to my PM and engineering, but they said it wasn't feasible due to technical limitations, so we passed on the idea.</p>
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <img src="images/scp/format in grid.gif" alt="Proposed &quot;format all&quot; option showing formatted text across every cell in the grid" style="width: 100%; height: auto; border-radius: 8px;">
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DESIGN PROBLEM #2: TAKING ACTION ON INTERESTING DATA
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top" id="problem-2">
+      <div class="w">
+        <span class="chapter-label">Design problem #2</span>
+        <h2>Taking action on interesting data</h2>
+        <p>When users find something of interest, they dig deeper on specific fields. I designed interactions where users can hover over a field, right-click to pull up a menu, and take action from there. This works from both the main data grid and the side panel.</p>
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <img src="images/scp/take actions.gif" alt="Hover, right-click, and take action on a field" style="width: 100%; height: auto; border-radius: 8px;">
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FINAL DESIGN
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-section--border-top" id="final">
+      <div class="w">
+        <h2>Final design</h2>
+        <p>I designed point-and-click interactions for the data grid so users can quickly scan through their data and take action on what they find.</p>
+      </div>
+
+      <div class="w" style="margin-top: 32px;">
+        <div class="video-wrap">
+          <img src="images/scp/final.gif" alt="Final prototype — click-through of the raw data exploration workflow" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         TAKEAWAYS
+    ══════════════════════════════════════ -->
+    <section class="cs-section--tint cs-section--border-top">
+      <div class="w">
+        <h2>What I learned</h2>
+
+        <div class="cs-role-row" style="grid-template-columns: 1fr; border-top: none; padding-top: 0; display: flex; flex-direction: column; gap: 28px;">
+          <div>
+            <h3 style="margin-top: 0;">1. Make sure everyone is aligned.</h3>
+            <p>I started design explorations and only found out late that my designs didn't match the head PM's vision. That vision was never documented, and even with regular check-ins, the misalignment wasn't caught until later, and I had to rush to change my designs. I raised this with the team and we changed our process. Product vision would be documented so we had a working source of truth, and we'd sync with the head PM more often to catch misalignment earlier.</p>
+          </div>
+
+          <div>
+            <h3 style="margin-top: 0;">2. It's okay to have more than one way to perform an action.</h3>
+            <p>I spent a lot of time trying to find the one, best way to expand a cell. My teammates pointed out that supporting multiple methods is a good solution, and many products have multiple ways to perform the same action. That reframed how I approach interaction design. Forcing a single path isn't always the best experience, and I've carried that into later projects.</p>
+          </div>
+
+          <div>
+            <h3 style="margin-top: 0;">3. Think beyond the page: consider the platform and product ecosystem when designing.</h3>
+            <p>This project taught me to design with the ecosystem in mind, and consider patterns across the platform and products to make sure we have consistency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         NEXT PROJECT
+    ══════════════════════════════════════ -->
+    <section class="cs-section--next cs-section--border-top">
+      <div class="w">
+        <span class="cs-next-label">Previous project</span>
+        <a href="mobile_vision.html" class="next-project-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+            <div>
+              <span class="next-project-card__eyebrow">Strategy · Mobile · AI</span>
+              <div class="next-project-card__title">QuickBooks Mobile Vision</div>
+              <p class="next-project-card__desc">Presented vision for AI-native mobile experiences that secured leadership alignment, greenlit multiple initiatives, and won dedicated headcount to build it.</p>
+            </div>
+            <div style="flex-shrink: 0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer site-footer--cs">
+    <p class="footer-copy">© 2026 Lucy Mou</p>
+    <div class="footer-icons">
+      <a href="mailto:ymou94@gmail.com" class="footer-icon" aria-label="Email Lucy Mou">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/y-mou/" target="_blank" rel="noopener" class="footer-icon" aria-label="Lucy Mou on LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const bar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+      bar.style.width = Math.min(pct, 100) + '%';
+    }, { passive: true });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('main img:not(.no-lightbox)').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>
